@@ -19,20 +19,22 @@ public class AlgorithmTest {
         System.out.println(">>>Generated array to sort: ");
         int[] array = getListToSort();
         showArray(array);
-        System.out.println("***Sorted array is");
+        System.out.println("###############");
+        //System.out.println("***Sorted array is");
         
         //The sorting algorithm is a tuned quicksort, by JDK
         //Arrays.sort(array);
         
-        int[] array2 = array;
-        
-        new QuickSort().sort(array);
+        //int[] array2 = array;
+        System.out.println("Quick sort algorithm 1 - pivot at start - MIT algorithm course");
+        new QuickSort().anotherSort(array);
         showArray(array);
-        
+         
         System.out.println("###############");
         
-        new QuickDemo().sort(array2);
-        showArray(array2);
+        System.out.println("Quick sort algorithm 2 - pivot at middle");
+        new QuickSort().sort(array);
+        showArray(array);
         
         //search target emelemt int 20 in the array
         //System.out.println("Target element is: 20");
@@ -69,7 +71,7 @@ public class AlgorithmTest {
     private static int[] getListToSort(){
         Random randomGenerator = new Random();
         int newrandom;
-        int randomInt = randomGenerator.nextInt(100);
+        int randomInt = randomGenerator.nextInt(30);
         int listtosort[] = new int[randomInt];
         System.out.println("Size is "+randomInt);
         for(int t=0;t<randomInt;t++){
